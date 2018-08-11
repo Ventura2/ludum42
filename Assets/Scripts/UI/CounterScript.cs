@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class CounterScript : MonoBehaviour {
 
     public static CounterScript instance;
-    public ShowPlop plop;
 
     private float timer = 5;
 
@@ -23,6 +22,12 @@ public class CounterScript : MonoBehaviour {
     }
 
     void Update() {
+        if(GameController.instance != null) {
+            if (GameController.instance.GetGameState() == GameState.Death)
+                return;
+        }
+
+
         timer -= Time.deltaTime;
 
         counterText.text = "" + (int)timer;
@@ -30,7 +35,6 @@ public class CounterScript : MonoBehaviour {
 
         if(timer <= 0.5f) {
             counterText.color = new Color(counterText.color.r, counterText.color.g, counterText.color.b, 0.0f);
-            plop.Show();
         }
     }
 

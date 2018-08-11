@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShrinkPlatform : MonoBehaviour {
 
-    public float ShrinkPerSecond = 5;
+    public float ShrinkPerSecond = 0.5f;
 
     private GameController gameController;
 
