@@ -6,11 +6,23 @@ public class ShrinkPlatform : MonoBehaviour {
 
     public float ShrinkPerSecond = 5;
 
+    private GameController gameController;
 
-
+    void Start() {
+        if(GameController.instance != null) {
+            gameController = GameController.instance;
+        }
+    }
 
 
     private void Update() {
+        if(gameController.GetGameState() != GameState.Death) {
+            ReducePlatform();
+        }
+
+    }
+
+    private void ReducePlatform() {
 
         if (transform.localScale.x <= 0) {
             Destroy(this.gameObject);
@@ -20,7 +32,6 @@ public class ShrinkPlatform : MonoBehaviour {
         newScale.x -= ShrinkPerSecond * Time.deltaTime;
 
         transform.localScale = newScale;
-
     }
 
 }

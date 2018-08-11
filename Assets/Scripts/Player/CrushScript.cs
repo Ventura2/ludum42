@@ -9,11 +9,6 @@ public class CrushScript : MonoBehaviour {
         boxCollider = this.GetComponent<BoxCollider2D>();
     }
 
-    private void Update() {
-        
-
-    }
-
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Platform")) {
             Debug.Log("aplastado");
