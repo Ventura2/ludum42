@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicScript : MonoBehaviour {
-
+    
     public static MusicScript instance;
 
 
@@ -16,4 +16,5 @@ public class MusicScript : MonoBehaviour {
         }
         DontDestroyOnLoad(this.gameObject);
     }
+    
 }
