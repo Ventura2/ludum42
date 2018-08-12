@@ -19,12 +19,13 @@ public class PlayerMovement : MonoBehaviour {
 
     private bool jumping;
 
-	// Use this for initialization
+    private bool facingRight;
+
 	void Start () {
+        facingRight = true;
         rigidBody = GetComponent<Rigidbody2D>();
 	}
 
-    // Update is called once per frame
     void Update() {
 
         float jumpVelocity = getJumpVelocity();
@@ -32,10 +33,16 @@ public class PlayerMovement : MonoBehaviour {
 
         rigidBody.velocity = new Vector2(horizontalMovement, jumpVelocity);
 
+
         if (isVelocityPoweredUp) {
             UpdatePowerUp();
         }
+
+        if (isLookingToWrongDirection(horizontalMovement)) {
+            Flip();
+        }
 	}
+
 
     private void UpdatePowerUp() {
         
@@ -88,6 +95,18 @@ public class PlayerMovement : MonoBehaviour {
         this.expireTimePowerUp = Time.time + totalTime;
 
         isVelocityPoweredUp = true;
+    }
+
+
+    private bool isLookingToWrongDirection(float horizontalMovement) {
+        return (horizontalMovement > 0.1f && !facingRight) || (horizontalMovement < -0.1f && facingRight);
+    }
+    private void Flip() {
+            facingRight = !facingRight;
+            Vector3 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+       
     }
 
 }
