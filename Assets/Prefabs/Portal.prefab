@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212520454342084262}
   - component: {fileID: 114803865444658840}
   - component: {fileID: 61992509156698696}
+  - component: {fileID: 95358782723197348}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -67,6 +68,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!95 &95358782723197348
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342365004878328}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca42f5b05cb499241bc218af45e13ee2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114803865444658840
 MonoBehaviour:
   m_ObjectHideFlags: 1
