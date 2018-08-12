@@ -21,10 +21,13 @@ public class PlayerMovement : MonoBehaviour {
 
     private bool facingRight;
 
+    public AudioSource jumpingAudioSource;
+    public AudioSource powerUpAudioSource;
 	void Start () {
         facingRight = true;
         rigidBody = GetComponent<Rigidbody2D>();
-	}
+
+    }
 
     void Update() {
 
@@ -55,6 +58,7 @@ public class PlayerMovement : MonoBehaviour {
     private float getJumpVelocity() {
         float jumpVelocity = rigidBody.velocity.y;
         if (canJump()) {
+            jumpingAudioSource.Play();
             jumpVelocity = jumpForce;
             jumping = true;
         }
@@ -95,6 +99,7 @@ public class PlayerMovement : MonoBehaviour {
         this.expireTimePowerUp = Time.time + totalTime;
 
         isVelocityPoweredUp = true;
+        powerUpAudioSource.Play();
     }
 
 
