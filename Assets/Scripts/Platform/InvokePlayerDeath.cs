@@ -13,6 +13,8 @@ public class InvokePlayerDeath : MonoBehaviour {
 
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        player.Death ();
+        if (collision.CompareTag("Player")) {
+            player.Death();
+        }
     }
 }
