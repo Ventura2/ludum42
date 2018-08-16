@@ -92,6 +92,10 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision) {
+        jumping = true;
+    }
+
     internal void OnPowerUpVelocity(float newVelocity, float totalTime) {
         oldXVelocity = xVelocity;
         xVelocity = newVelocity;
