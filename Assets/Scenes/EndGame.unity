@@ -1244,7 +1244,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Miguel Angel
+  m_Text: "Miguel \xC1ngel Jim\xE9nez Fern\xE1ndez"
 --- !u!222 &1266305586
 CanvasRenderer:
   m_ObjectHideFlags: 0
