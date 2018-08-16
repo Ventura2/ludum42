@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private bool canJump() {
-        return Input.GetButtonDown("Jump") && !jumping;
+        return Input.GetButton("Jump") && !jumping;
     }
 
     private float getHorizontalMovement() {
