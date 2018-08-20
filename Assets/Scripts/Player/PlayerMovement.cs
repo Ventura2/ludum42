@@ -29,7 +29,21 @@ public class PlayerMovement : MonoBehaviour {
 
     }
 
-    void Update() {
+    private void Update() {
+        if (isVelocityPoweredUp) {
+            UpdatePowerUp();
+        }
+    }
+
+    private void UpdatePowerUp() {
+
+        if (Time.time > expireTimePowerUp) {
+            xVelocity = oldXVelocity;
+            Debug.Log("Powerup Finished");
+        }
+    }
+
+    void FixedUpdate() {
 
         float jumpVelocity = getJumpVelocity();
         float horizontalMovement = getHorizontalMovement();
@@ -37,9 +51,6 @@ public class PlayerMovement : MonoBehaviour {
         rigidBody.velocity = new Vector2(horizontalMovement, jumpVelocity);
 
 
-        if (isVelocityPoweredUp) {
-            UpdatePowerUp();
-        }
 
         if (isLookingToWrongDirection(horizontalMovement)) {
             Flip();
@@ -47,13 +58,6 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 
-    private void UpdatePowerUp() {
-        
-        if(Time.time > expireTimePowerUp) {
-            xVelocity = oldXVelocity;
-            Debug.Log("Powerup Finished");
-        }
-    }
 
     private float getJumpVelocity() {
         float jumpVelocity = rigidBody.velocity.y;
