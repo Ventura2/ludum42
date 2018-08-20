@@ -2008,6 +2008,11 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+--- !u!70 &347046978 stripped
+CapsuleCollider2D:
+  m_PrefabParentObject: {fileID: 70112816759461206, guid: 5065b19a3c7e0814798cceac8728027b,
+    type: 2}
+  m_PrefabInternal: {fileID: 655078951}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2096,7 +2101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &537060397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2260,6 +2265,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61872525181501972, guid: 5065b19a3c7e0814798cceac8728027b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70112816759461206, guid: 5065b19a3c7e0814798cceac8728027b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70180884467406364, guid: 5065b19a3c7e0814798cceac8728027b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114663961196347902, guid: 5065b19a3c7e0814798cceac8728027b,
+        type: 2}
+      propertyPath: collider2D
+      value: 
+      objectReference: {fileID: 347046978}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5065b19a3c7e0814798cceac8728027b, type: 2}
   m_IsPrefabParent: 0
