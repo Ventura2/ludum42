@@ -23,9 +23,15 @@ public class PlayerMovement : MonoBehaviour {
 
     public AudioSource jumpingAudioSource;
     public AudioSource powerUpAudioSource;
+
+    public SimpleTouchPad movementTouchPad;
+    public TouchAreaButton touchAreaButton;
+
 	void Start () {
         facingRight = true;
         rigidBody = GetComponent<Rigidbody2D>();
+
+       // touchPad = GameObject.FindGameObjectWithTag("MovementTouchPad").GetComponent<SimpleTouchPad>();
 
     }
 
@@ -71,17 +77,31 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private bool canJump() {
-        return Input.GetButton("Jump") && !jumping;
+        bool buttonPressed;
+
+#if UNITY_ANDROID
+        buttonPressed = touchAreaButton.IsTouched();
+#else
+        buttonPressed = Input.GetButton("Jump");
+#endif
+
+        return buttonPressed && !jumping;
     }
 
     private float getHorizontalMovement() {
         float horizontalMovement = rigidBody.velocity.x;
-        float xAxis = Input.GetAxis("Horizontal");
+
+        float xAxis = 0f;
+
+#if UNITY_ANDROID
+         xAxis = movementTouchPad.GetDirection().x;
+#else
+            xAxis = Input.GetAxis("Horizontal");
+#endif
 
         if (enoughAxis(xAxis, MIN_HORIZONTAL_AXIS)) {
             horizontalMovement = xAxis * xVelocity;
         }
-
         return horizontalMovement;
     }
 
