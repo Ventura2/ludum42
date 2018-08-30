@@ -31,8 +31,10 @@ public class PlayerMovement : MonoBehaviour {
         facingRight = true;
         rigidBody = GetComponent<Rigidbody2D>();
 
+#if UNITY_ANDROID
         movementTouchPad = GameObject.FindGameObjectWithTag("MovementTouchPad").GetComponent<SimpleTouchPad>();
         touchAreaButton = GameObject.FindGameObjectWithTag("JumpZone").GetComponent<TouchAreaButton>();
+#endif
 
     }
 

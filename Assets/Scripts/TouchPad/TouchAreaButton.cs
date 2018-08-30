@@ -9,6 +9,10 @@ public class TouchAreaButton : MonoBehaviour ,IPointerDownHandler, IPointerUpHan
     private int pointerID;
 
     private void Awake() {
+
+#if !UNITY_ANDROID
+        this.gameObject.SetActive(false);
+#endif
         touched = false;
     }
 
