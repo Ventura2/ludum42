@@ -12,6 +12,8 @@ public class TouchAreaButton : MonoBehaviour ,IPointerDownHandler, IPointerUpHan
 
 #if !UNITY_ANDROID
         this.gameObject.SetActive(false);
+#else
+        this.gameObject.SetActive(true);
 #endif
         touched = false;
     }

@@ -22,6 +22,8 @@ public class SimpleTouchPad : MonoBehaviour, IPointerDownHandler, IDragHandler, 
     private void Awake() {
 #if  !UNITY_ANDROID
         this.gameObject.SetActive(false);
+#else
+        this.gameObject.SetActive(true);
 #endif
         direction = Vector2.zero;
         touched = false;
