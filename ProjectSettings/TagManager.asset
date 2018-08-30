@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Platform
   - PowerUp
+  - MovementTouchPad
+  - JumpZone
   layers:
   - Default
   - TransparentFX

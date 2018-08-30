@@ -31,22 +31,24 @@ public class PlayerMovement : MonoBehaviour {
         facingRight = true;
         rigidBody = GetComponent<Rigidbody2D>();
 
-       // touchPad = GameObject.FindGameObjectWithTag("MovementTouchPad").GetComponent<SimpleTouchPad>();
+        movementTouchPad = GameObject.FindGameObjectWithTag("MovementTouchPad").GetComponent<SimpleTouchPad>();
+        touchAreaButton = GameObject.FindGameObjectWithTag("JumpZone").GetComponent<TouchAreaButton>();
 
     }
 
     private void Update() {
-        if (isVelocityPoweredUp) {
-            UpdatePowerUp();
+        if (isVelocityPoweredUp && powerUpExpired()) {
+            resetVelocity();
         }
     }
 
-    private void UpdatePowerUp() {
+    private bool powerUpExpired() {
+        return Time.time > expireTimePowerUp;
+    }
 
-        if (Time.time > expireTimePowerUp) {
+    private void resetVelocity() {
             xVelocity = oldXVelocity;
             Debug.Log("Powerup Finished");
-        }
     }
 
     void FixedUpdate() {
@@ -56,8 +58,7 @@ public class PlayerMovement : MonoBehaviour {
 
         rigidBody.velocity = new Vector2(horizontalMovement, jumpVelocity);
 
-
-
+        
         if (isLookingToWrongDirection(horizontalMovement)) {
             Flip();
         }

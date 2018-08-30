@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg4159"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="TutorialPointer.svg"
+   inkscape:export-filename="E:\Projects\unityProjects\ludum42\Ludum42\Assets\Images\MobilePhone\TutorialPointer.png"
+   inkscape:export-xdpi="50.613792"
+   inkscape:export-ydpi="50.613792">
+  <defs
+     id="defs4161" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.4279635"
+     inkscape:cx="302.85991"
+     inkscape:cy="558.61304"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-object-midpoints="false"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-center="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-nodes="false"
+     inkscape:snap-others="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4164">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 187.14286,341.64792 0,108.8134 c 0,0 3.68144,-70.59598 -26.09067,-31.45597 -29.77211,39.14001 -14.74293,47.98096 9.61596,78.44904 23.2459,29.07596 16.47471,42.05067 16.47471,42.05067 42.01052,22.24086 104.59081,17.29845 161.42857,0 8.23736,-25.5358 0.10019,-130.71428 0.10019,-130.71428 0,0 -8.9e-4,-26.42858 -20.11905,-26.42858 -20.11816,0 -20.21924,26.42858 -20.21924,26.42858 0,0 1.53892,-26.42858 -20.01886,-26.42858 -21.55778,0 -20.21923,26.42858 -20.21923,26.42858 0,0 0.79903,-26.88809 -20.01886,-26.42858 -20.81789,0.45951 -20.21924,26.42858 -20.21924,26.42858 -0.3366,0.49863 -0.28567,-48.57481 -0.30999,-67.74511 -0.0248,-19.54138 -5.12387,-44.15175 -17.9043,-44.04061 -25.56085,0.22226 -22.49999,44.64286 -22.49999,44.64286 z"
+       id="path4707"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cczsccczczczcssc"
+       inkscape:export-xdpi="50.613792"
+       inkscape:export-ydpi="50.613792" />
+  </g>
+</svg>

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/InfoArtic.unity
     guid: e7de2e4d2afb91f4cb62b8bd628dc89a
   - enabled: 1
+    path: Assets/Scenes/MobileTutorial.unity
+    guid: 8a467cac588f95f4d8b03c99fba4b914
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 4af5b285ef812db479af876bda68dfb5
   - enabled: 1
