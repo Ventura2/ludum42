@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour {
     public AudioSource jumpingAudioSource;
     public AudioSource powerUpAudioSource;
 
-    public SimpleTouchPad movementTouchPad;
-    public TouchAreaButton touchAreaButton;
+    private SimpleTouchPad movementTouchPad;
+    private TouchAreaButton touchAreaButton;
 
 	void Start () {
         facingRight = true;
